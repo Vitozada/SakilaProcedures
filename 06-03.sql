@@ -42,7 +42,7 @@ from rental R
  
 
 
-
+-- primeira tentativa com alguns erros
 select CONCAT(CC.first_name, " ", CC.last_name) as Nome_cliente,
 CASE 
     WHEN S.staff_id = 1 THEN (SUM(P.amount) * 0.5)
@@ -52,7 +52,7 @@ CONCAT(S.first_name, " ", S.last_name) as Nome_Staff
 from  customer CC 
 inner join payment P on CC.customer_id = P.customer_id
 inner join staff S on P.staff_id = S.staff_id
-WHERE S.staff_id = 1;
+WHERE S.staff_id = 1; 
 
 select 
 CONCAT(C.first_name, " ",  C.last_name) as "Nome cliente",
